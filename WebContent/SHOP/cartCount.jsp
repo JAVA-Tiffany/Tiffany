@@ -12,6 +12,6 @@
 <fmt:requestEncoding value="utf-8" />
 <jsp:useBean id="dao" class="cart.cartDAO"/>
 ${dao.modifyCount(param.count,param.product) } 
-<c:redirect url="testcart.jsp"/> 
+<c:redirect url="cart.jsp"/> 
 </body>
 </html>

@@ -11,7 +11,7 @@ import java.util.ArrayList;
 import Database.DTO;
 
 public class DAO {
-	private String url ="jdbc:oracle:thin:@localhost:1521:xe";
+	private String url ="jdbc:oracle:thin:@192.168.203.128:1521:xe";
 	private String user ="java";
 
 	private String pwd = "1234";
