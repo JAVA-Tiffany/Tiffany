@@ -8,7 +8,8 @@ import java.sql.SQLException;
 
 public class FileDAO {
 	private String url ="jdbc:oracle:thin:@localhost:1521:xe";
-	private String user ="java";
+
+	private String user ="jsp";
 	private String pwd = "1234";
 	private Connection con;
 	private PreparedStatement ps;

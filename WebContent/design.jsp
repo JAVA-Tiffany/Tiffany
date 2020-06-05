@@ -16,7 +16,8 @@
 		.then(function (canvas) { //jpg 결과값
 			drawImg(canvas.toDataURL('image/jpeg')); //이미지 저장
 			saveAs(canvas.toDataURL(), 'file-name.jpg'); 
-		})catch(function (err) { 
+
+		}).catch(function (err) { 
 			console.log(err); 
 		}); 
 	} 
@@ -38,6 +39,7 @@
 
 		form.setAttribute('method', 'post');
 
+		form.setAttribute('target','param')
 		form.setAttribute('action', 'canvasupload.jsp');
 		document.charset = "utf-8";
 		
@@ -53,17 +55,6 @@
 		
 		document.body.appendChild(form);
 		form.submit();
-		
-		var link = document.createElement('a'); 
-		if (typeof link.download === 'string') { 
-			link.href = uri; 
-			link.download = filename;
-			document.body.appendChild(link); 
-			link.click(); 
-			document.body.removeChild(link); 
-		} else { 
-			window.open(uri); 
-		} 
 	}
 
 	</script>
@@ -108,7 +99,7 @@
 			      var img3 = new Image();
 			      img3.addEventListener('load',function(){
 			         var ctx3 = document.getElementById('myCanvas3').getContext("2d");
-			         ctx3.drawImage(img3,0,0,50,50);
+			         ctx3.drawImage(img3,0,0,300,150);
 			      },false);
 			      img3.src="img/down.png";
 		}
