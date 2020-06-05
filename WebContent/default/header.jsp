@@ -24,13 +24,7 @@ align-items: center;
  }
 h1 {
 	margin: 0;
-    display: block;
-    font-size: 2em;
-    margin-block-start: 0.67em;
-    margin-block-end: 0.67em;
-    margin-inline-start: 0px;
-    margin-inline-end: 0px;
-    font-weight: bold;
+
 }
 nav { color: gray; }
  }
@@ -53,7 +47,7 @@ body, html {
 .dropdown { position: relative; display: inline-block;}
 .dropdown-content {   display: none; position: absolute; background-color:#f1f1f1;
 			 min-width: 80px; min-height: 150px; text-align:center; right: 0px; 
-			 box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);font-weight:normal;font-size:20px;font-family:Georgia;
+			 box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);font-weight:normal;font-size:16px;font-family: Yu Gothic UI;
  z-index:1; }
 .dropdown-content a:hover { background-color: #ddd; }
 .dropdown:hover .dropdown-content { display: block; }
@@ -62,7 +56,7 @@ body, html {
 .dropdown1 { position: relative; display: inline-block;}
 .dropdown-content1 {   display: none; position: absolute; background-color:#f1f1f1;
 			 min-width: 100px; min-height: 150px; text-align:center; right: 0px;
-			 box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);font-weight:normal;font-size:20px;font-family:Georgia;
+			 box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);font-weight:normal;font-size:16px;font-family: Yu Gothic UI;
  z-index:1; }
 .dropdown-content1 a:hover { background-color: #ddd; }
 .dropdown1:hover .dropdown-content1 { display: block; }
@@ -71,7 +65,7 @@ body, html {
 .dropdown0 { position: relative; display: inline-block;}
 .dropdown-content0 {   display: none; position: absolute; background-color:#f1f1f1;
 			 min-width: 80px; min-height: 120px; text-align:center; right: 0px;
-			 box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);font-weight:normal;font-size:20px;font-family:Georgia;
+			 box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);font-weight:normal;font-size:16px;font-family: Yu Gothic UI;
  z-index:1; }
 .dropdown-content0 a:hover { background-color: #ddd; }
 .dropdown0:hover .dropdown-content0 { display: block; }
@@ -90,13 +84,13 @@ body, html {
 			<span class="dropbtn"><a href="#" style="color: black;">SHOP</a></span>&nbsp;&nbsp;
 				<div class="dropdown-content">
 				<a href="#" style="color: black;">ALL</a><br>
-				<a href="#" style="color: black;">RING</a>
-				<a href="#" style="color: black;">EARRING</a>
-				<a href="#" style="color: black;">NECKLACE</a>
-				<a href="#" style="color: black;">BRACELET</a>
-				<a href="#" style="color: black;">CLOTHES</a>
-				<a href="#" style="color: black;">PANTS</a>
-				<a href="#" style="color: black;">BAGS</a>
+				<a href="#" style="color: black;">RING</a><br>
+				<a href="#" style="color: black;">EARRING</a><br>
+				<a href="#" style="color: black;">NECKLACE</a><br>
+				<a href="#" style="color: black;">BRACELET</a><br>
+				<a href="#" style="color: black;">CLOTHES</a><br>
+				<a href="#" style="color: black;">PANTS</a><br>
+				<a href="#" style="color: black;">BAGS</a><br>
 				</div></div>
 			
 			<span><a href="#" style="color: black;">COLLECTION</a></span>&nbsp;&nbsp;
@@ -140,15 +134,15 @@ body, html {
         }
    </script>
 
-				<span><a href="#" style="color: black;" onclick="openChild()">LOGIN</a></span>
+				<span><a href="#" style="color: black;" onclick="openChild()">LOGIN</a><br></span>
 				</c:when>
 				<c:otherwise>
-				<span><a href="../login&join/logout.jsp" style="color: black;">LOGOUT</a></span>
+				<span><a href="../login&join/logout.jsp" style="color: black;">LOGOUT</a><br></span>
 				</c:otherwise>
 				</c:choose>
 				
 				
-				<a href="#" style="color: black;" onclick="openChild2()">JOIN US</a>
+				<a href="#" style="color: black;" onclick="openChild2()">JOIN US</a><br>
 				
 				
 				<c:choose>
@@ -166,7 +160,7 @@ body, html {
 				</c:when>
 				<c:otherwise>
 				<a href="../SHOP/cart.jsp" style="color: black;">CART</a>
-				<a href="#" style="color: black;">MYSHOP</a>
+				<a href="../SHOP/MyShop.jsp" style="color: black;">MYSHOP</a>
 				<a href="#" style="color: black;">WISH LIST</a>
 				<a href="#" style="color: black;">ORDER LIST</a>
 				</c:otherwise>
