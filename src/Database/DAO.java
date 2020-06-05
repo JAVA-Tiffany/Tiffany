@@ -7,17 +7,20 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
 
+
 import Database.DTO;
 
 public class DAO {
 	private String url ="jdbc:oracle:thin:@localhost:1521:xe";
 	private String user ="java";
+
 	private String pwd = "1234";
 	private Connection con;
 	private PreparedStatement ps;
 	private ResultSet rs;
 	public DAO() {
-		
+
+
 		try {
 			Class.forName("oracle.jdbc.driver.OracleDriver");
 		} catch (ClassNotFoundException e) {
@@ -40,7 +43,7 @@ public class DAO {
 				dto.setAddr(rs.getString("addr"));
 				dto.setPhon(rs.getString("phon"));
 				list.add(dto);
-				
+
 			}
 		} catch (SQLException e) {
 			// TODO Auto-generated catch block
@@ -48,6 +51,7 @@ public class DAO {
 		}
 		return list;
 	}
+
 	
 	
 	public ArrayList<DTO> select(String id){
@@ -69,7 +73,7 @@ public class DAO {
 		}
 		return list;
 	}
-	
+
 	public void insert(String id,String pw,String name,String addr,String phon){
 		String sql = "insert into self_design values(?,?,?,?,?)";
 		try {
@@ -82,6 +86,7 @@ public class DAO {
 			ps.setString(5,phon);
 			ps.executeUpdate();
 		} catch (SQLException e) {
+
 			e.printStackTrace();
 		}
 	}
@@ -119,5 +124,6 @@ public class DAO {
 		
 	}
 	
+
 
 }
