@@ -12,7 +12,7 @@ public class cartDAO {
 	 private Connection con;
 	   private PreparedStatement ps;
 	   private ResultSet rs;
-	   private String url = "jdbc:oracle:thin:@localhost:1521:xe";
+	   private String url = "jdbc:oracle:thin:@192.168.203.128:1521:xe";
 	   private String user ="java";
 	   private String pwd ="1234";
 	   

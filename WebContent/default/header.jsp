@@ -83,7 +83,7 @@ body, html {
 <body>
 <!-- height: 200%;  -->
 <div id="fixed">
-	<div><h1><a href="/Tiffany/index.jsp" style="color: black;">Brand</a></h1></div>
+	<div><h1><a href="/Tiffany/default/index.jsp" style="color: black;">Brand</a></h1></div>
 		<div>
 		<nav>
 			<div class="dropdown">
@@ -127,7 +127,7 @@ body, html {
             var popupX = (window.screen.width / 2) - (900 / 2);
          	var popupY= (window.screen.height /2) - (600 / 2);
          
-            openWin = window.open("/Tiffany/login.jsp",
+            openWin = window.open("../login&join/login.jsp",
                     "logindForm", 'status=no, height=600, width=900, left='+ popupX + ', top='+ popupY + ', screenX='+ popupX + ', screenY= '+ popupY + ", resizable = no, scrollbars = no");    
         }
         function openChild2()
@@ -135,7 +135,7 @@ body, html {
             window.name = "parentForm";
             var popupX = (window.screen.width / 2) - (900 / 2);
             var popupY= (window.screen.height /2) - (600 / 2);
-            openWin = window.open("/Tiffany/join.jsp",
+            openWin = window.open("../login&join/join.jsp",
                     "joinForm", 'status=no, height=600, width=900, left='+ popupX + ', top='+ popupY + ', screenX='+ popupX + ', screenY= '+ popupY + ", resizable = no, scrollbars = no");     
         }
    </script>
@@ -143,7 +143,7 @@ body, html {
 				<span><a href="#" style="color: black;" onclick="openChild()">LOGIN</a></span>
 				</c:when>
 				<c:otherwise>
-				<span><a href="/Tiffany/logout.jsp" style="color: black;">LOGOUT</a></span>
+				<span><a href="../login&join/logout.jsp" style="color: black;">LOGOUT</a></span>
 				</c:otherwise>
 				</c:choose>
 				
@@ -165,7 +165,7 @@ body, html {
 					<a href="#" style="color: black;" onclick="loginafter()">ORDER LIST</a>
 				</c:when>
 				<c:otherwise>
-				<a href="/Tiffany/SHOP/testcart.jsp" style="color: black;">CART</a>
+				<a href="../SHOP/cart.jsp" style="color: black;">CART</a>
 				<a href="#" style="color: black;">MYSHOP</a>
 				<a href="#" style="color: black;">WISH LIST</a>
 				<a href="#" style="color: black;">ORDER LIST</a>

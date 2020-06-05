@@ -44,7 +44,7 @@
   z-index:-1;
 }  
 </style>
-<script src="jquery-3.2.1.min.js"></script>
+<script src="/Tiffany/jquery-3.2.1.min.js"></script>
 <script type="text/javascript">
 //상단 선택버튼 클릭시 체크된 Row의 값을 가져온다.
 $(document).ready(function() {
@@ -171,7 +171,7 @@ $(document).ready(function() {
 </script>
 </head>
 <body style="font-family: Yu Gothic; ">
-<%@include file="/header.jsp" %>
+<%@include file="../default/header.jsp" %>
 <fmt:requestEncoding value="utf-8" />
 <jsp:useBean id="dao" class="cart.cartDAO"/>
 <div style="text-align: center; padding-top: 80px;" align="center">

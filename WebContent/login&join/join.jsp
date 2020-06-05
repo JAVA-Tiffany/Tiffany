@@ -7,15 +7,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="icon" type="image/png" href="images/icons/favicon.ico"/>
-<link rel="stylesheet" type="text/css" href="vendor/bootstrap/css/bootstrap.min.css">
-<link rel="stylesheet" type="text/css" href="fonts/font-awesome-4.7.0/css/font-awesome.min.css">
-<link rel="stylesheet" type="text/css" href="vendor/animate/animate.css">
-<link rel="stylesheet" type="text/css" href="vendor/css-hamburgers/hamburgers.min.css">
-<link rel="stylesheet" type="text/css" href="vendor/select2/select2.min.css">
-<link rel="stylesheet" type="text/css" href="css/util.css">
-<link rel="stylesheet" type="text/css" href="css/main.css">
-<script type="text/javascript" src="vendor/jquery/jquery-3.2.1.min.js"></script>
+<link rel="icon" type="../image/png" href="../images/icons/favicon.ico"/>
+<link rel="stylesheet" type="text/css" href="../vendor/bootstrap/css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="../fonts/font-awesome-4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="../vendor/animate/animate.css">
+<link rel="stylesheet" type="text/css" href="../vendor/css-hamburgers/hamburgers.min.css">
+<link rel="stylesheet" type="text/css" href="../vendor/select2/select2.min.css">
+<link rel="stylesheet" type="text/css" href="../css/util.css">
+<link rel="stylesheet" type="text/css" href="../css/main.css">
+<script type="text/javascript" src="/Tiffany/vendor/jquery/jquery-3.2.1.min.js"></script>
 <title>Insert title here</title>
 </head>
 <body>
@@ -24,7 +24,6 @@
 	<fmt:requestEncoding value="utf-8"/>
 	<jsp:useBean id="dao" class="Database.DAO"/>
 	
-	<script type="text/javascript">
 
 	<c:forEach var="dto" items="${dao.select()}">
 		<script type="text/javascript">
@@ -100,7 +99,7 @@
 		<div class="container-login100" align="center">
 			<div class="wrap-login100" align="center">
 			<div class="login100-pic js-tilt" data-tilt>
-				<img src="images/80678738_2416624028588147_5452304186879982403_n.jpg" alt="IMG" style="padding:65px 0 0 0">
+				<img src="../images/80678738_2416624028588147_5452304186879982403_n.jpg" alt="IMG" style="padding:65px 0 0 0">
 			</div>
 				<div align="center">
 					<h2>Self Design 계정 만들기</h2><br>
@@ -167,34 +166,17 @@
 	</div>
 	</div>
 	
-	<script src="vendor/jquery/jquery-3.2.1.min.js"></script>
-	<script src="vendor/bootstrap/js/popper.js"></script>
-	<script src="vendor/bootstrap/js/bootstrap.min.js"></script>
-	<script src="vendor/select2/select2.min.js"></script>
-	<script src="vendor/tilt/tilt.jquery.min.js"></script>
+	<script src="/Tiffany/vendor/jquery/jquery-3.2.1.min.js"></script>
+	<script src="/Tiffany/vendor/bootstrap/js/popper.js"></script>
+	<script src="/Tiffany/vendor/bootstrap/js/bootstrap.min.js"></script>
+	<script src="/Tiffany/vendor/select2/select2.min.js"></script>
+	<script src="/Tiffany/vendor/tilt/tilt.jquery.min.js"></script>
 	<script >
 		$('.js-tilt').tilt({
 			scale: 1.1
 		})
 	</script>
-	<script src="js/main.js"></script>
-
-	<div align="center">
-		<h2>Self Design 계정 만들기</h2><br>
-		<form action="insert.jsp" name="user">
-			<input type="text" id="id" placeholder="아이디" class=i name="id">
-			<input type="button" onclick="ch()" value="중복확인" style="height: 40px; width: 80px; margin-left: 10px;"><br><br><br> 
-			<input type="text" id="pw" placeholder="비밀번호" class=i style="margin-right: 95px;" onchange="pwlengthch()" name="pw"><br>
-			<label style="margin-right: 95px;" id="pw1">비밀번호 사용 가능</label><br><br> 
-			<input type="text" id="pwc" placeholder="비밀번호 확인" class=i style="margin-right: 95px;" onchange="pwch()"><br> 
-			<label style="margin-right: 95px;" id="pwc2">비밀번호 사용 가능</label><br><br>
-			<input type="text" id="name" placeholder="이름" class=i style="margin-right: 95px;" name="name"><br> <br> <br> 
-			<input type="text" id="add" placeholder="주소" class=i style="margin-right: 95px;" name="add"><br> <br> <br>
-			<input type="text" id="phon" placeholder="핸드폰번호 xxx-xxxx-xxxx" class=i style="margin-right: 95px;" name="phon"><br> <br>
-			<label style="color: red; font-size: 25px;">모든 정보를 적어야 합니다</label><br><br>
-			<input type="button" onclick="al()" value="회원가입">
-		</form>
-	</div>
+	<script src="../js/main.js"></script>
 
 </body>
 </html>

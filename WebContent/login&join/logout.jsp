@@ -11,7 +11,7 @@
 <%session.invalidate(); %>
 <script type="text/javascript">
 	alert("로그아웃 하였습니다!")
-	location.href="index.jsp"
+	location.href="../default/index.jsp"
 </script>
 </body>
 </html>
