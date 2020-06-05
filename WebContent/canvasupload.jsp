@@ -1,3 +1,4 @@
+
 <%@page import="java.text.SimpleDateFormat"%>
 <%@page import="java.util.Date"%>
 <%@page import="file.makePngFile"%>
@@ -17,6 +18,7 @@
 		request.setCharacterEncoding("utf-8");
 		String imgurl = request.getParameter("cc");
 		String savename = fomat.format(da);
+
 		makePngFile makePngFile = new makePngFile(imgurl,savename);
 	%>
 </body>

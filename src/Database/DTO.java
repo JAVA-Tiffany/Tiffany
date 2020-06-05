@@ -6,6 +6,7 @@ public class DTO {
 	private String name;
 	private String addr;
 	private String phon;
+
 	public String getId() {
 		return id;
 	}

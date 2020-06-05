@@ -14,7 +14,9 @@
 	<jsp:useBean id="dao" class="Database.DAO"/>
 	<c:set var="testDto" value="${dao.insert(param.id,param.pw,param.name,param.add,param.phon)}"/>
 	<script type="text/javascript">
-		location.href="lonin.jsp"
+
+		location.href="login.jsp"
+
 	</script>
 </body>
 </html>
