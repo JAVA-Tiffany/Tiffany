@@ -106,6 +106,17 @@
 		
 	</script>
 	
+	<script type="text/javascript">
+		function opentip() {
+		    window.name = "parentForm";
+		    var popupX = (window.screen.width / 2) - (1300 / 2);
+		 	var popupY= (window.screen.height /2) - (850 / 2);
+		 
+		    openWin = window.open("tip.jsp",
+		            "logindForm", 'status=no, height=750, width=1300, left='+ popupX + ', top='+ popupY + ', screenX='+ popupX + ', screenY= '+ popupY + ", resizable = no, scrollbars = no");    
+		}
+	</script>
+	
 	<div style="width: 900px; margin: 0 auto">
 		<div style="display: flex; flex-flow:low; width: 700px; margin: 0 auto;">
 			<div onmouseover="style='cursor:pointer;text-align: center;'" style="text-align: center">
@@ -153,7 +164,7 @@
 		</div>
 		<div style="display: flex; flex-flow:low; background-color: #f8f9fa;">
 			<div style="width: 250px; margin-top: 50px;" align="left">
-				<div style="width: 200px; height:70px; background-color: #ffffff; display: flex; flex-flow:low; border: 1px solid #eaedf0;" align="left" onclick="location.href='tip.jsp'" onmouseover="style='cursor:pointer;width: 200px; height:70px; background-color: #ffffff; display: flex; flex-flow:low; border: 1px solid #eaedf0;'">
+				<div style="width: 200px; height:70px; background-color: #ffffff; display: flex; flex-flow:low; border: 1px solid #eaedf0;" align="left" onclick="opentip()" onmouseover="style='cursor:pointer;width: 200px; height:70px; background-color: #ffffff; display: flex; flex-flow:low; border: 1px solid #eaedf0;'">
 					<div style="margin-top: 10px;"> <img src="../img/tip.png" style="width: 50px; height: 50px;"> </div>
 					<div style="text-align: center; margin-top: 10px;"> <p>디자인하는 방법</p> </div>
 				</div>
