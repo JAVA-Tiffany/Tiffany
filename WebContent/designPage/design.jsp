@@ -16,13 +16,13 @@
 		.then(function (canvas) { //jpg 결과값
 			drawImg(canvas.toDataURL('image/jpeg')); //이미지 저장
 			saveAs(canvas.toDataURL(), 'file-name.jpg'); 
-
+			alert("장바구니에 담겼습니다.")
 		}).catch(function (err) { 
 			console.log(err); 
 		}); 
 	} 
 	function drawImg(imgData) { 
-		console.log(imgData); //imgData의 결과값을 console 로그롤 보실 수 있습니다. 
+// 		console.log(imgData); //imgData의 결과값을 console 로그롤 보실 수 있습니다. 
 		return new Promise(function reslove() { //내가 결과 값을 그릴 canvas 부분 설정 
 			var canvas = document.getElementById('canvas'); 
 			var ctx = canvas.getContext('2d'); //canvas의 뿌려진 부분 초기화 
@@ -55,6 +55,8 @@
 		
 		document.body.appendChild(form);
 		form.submit();
+		form.removeChild(hiddenField);
+		document.body.removeChild(form); 
 	}
 
 	</script>
@@ -118,7 +120,7 @@
 	</script>
 	
 	<div style="width: 900px; margin: 0 auto">
-		<div style="display: flex; flex-flow:low; width: 700px; margin: 0 auto;">
+		<div style="display: flex; flex-flow:low; width: 700px; margin: 0 auto;" align="left">
 			<div onmouseover="style='cursor:pointer;text-align: center;'" style="text-align: center">
 				<img src="../img/reset.png" style="width: 50px;height: 50px;" onclick=""><br><font style="font-size: 10px; text-align: center">처음으로</font>
 			</div>
@@ -161,9 +163,11 @@
 			<div onmouseover="style='cursor:pointer;text-align: center;'" style="text-align: center">
 				<img src="../img/down.png" style="width: 50px;height: 50px;" onclick=""><br><font style="font-size: 10px;">아래</font>
 			</div>
+			
 		</div>
 		<div style="display: flex; flex-flow:low; background-color: #f8f9fa;">
-			<div style="width: 250px; margin-top: 50px;" align="left">
+			<div style="width: 250px; margin-top: 50px;" align="center" >
+				<div align="center" onclick="partShot()" onmouseover="style='cursor:pointer; width: 200px; height: 70px; background-color: #ffffff; border: 1px solid #eaedf0;'" onclick="partShot()" style="width: 200px; height: 70px;background-color: #ffffff; border: 1px solid #eaedf0;"><p style="padding-top: 7px;"> 장바구니 담기</p> </div><br><br>
 				<div style="width: 200px; height:70px; background-color: #ffffff; display: flex; flex-flow:low; border: 1px solid #eaedf0;" align="left" onclick="opentip()" onmouseover="style='cursor:pointer;width: 200px; height:70px; background-color: #ffffff; display: flex; flex-flow:low; border: 1px solid #eaedf0;'">
 					<div style="margin-top: 10px;"> <img src="../img/tip.png" style="width: 50px; height: 50px;"> </div>
 					<div style="text-align: center; margin-top: 10px;"> <p>디자인하는 방법</p> </div>
@@ -179,7 +183,7 @@
 					</div>
 				</div>
 			</div>
-			<div style="display: flex; flex-flow:column;" align="center">
+			<div style="display: flex; flex-flow:column; margin-left: 25px;" align="center">
 				<img src="../img/change.png" style="width: 100px;height: 100px;" onclick="" onmouseover="style='cursor:pointer;width: 100px;height: 100px;'">
 				<img src="../img/upload.png" style="width: 100px;height: 100px;" id="btn-upload" onmouseover="style='cursor:pointer;width: 100px;height: 100px;'">
 				<img src="../img/myimg.png" style="width: 100px;height: 100px;" onclick="" onmouseover="style='cursor:pointer;width: 100px;height: 100px;'">
@@ -193,7 +197,6 @@
 	</form>
 	<iframe id="if" name="param" style="display:none;"></iframe>
 	<!-- 일부분 부분-->
-	<button onclick="partShot()">이미지 저장</button>
 	<!-- 결과화면을 그려줄 canvas -->
 	<canvas id="canvas" width="900" height="600"
 		style="border: 1px solid #d3d3d3; display:none;">
